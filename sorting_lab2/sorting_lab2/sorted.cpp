@@ -165,14 +165,14 @@ void test_quick_sort(int n) {
 int main() {
 	setlocale(LC_ALL, "ru");
 	for (int i = 1000; i <= 10000; i += 1000) {
-		test_selection_sort(i);
+		test_quick_sort(i);
 		cout << endl;
 	}
-	test_selection_sort(25000);
+	test_quick_sort(25000);
 	cout << endl;
-	test_selection_sort(50000);
+	test_quick_sort(50000);
 	cout << endl;
-	test_selection_sort(100000);
+	test_quick_sort(100000);
 	cout << endl;
 }
 
