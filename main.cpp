@@ -1,8 +1,8 @@
 #include "Test.h"
 
-void print(int* arr, int n) {
-	for (int i = 0; i < n; i++) {
-		cout << "[" << i << "] = " << arr[i] << "\t";
+void print(vector<int> arr) {
+	for (int i = 0; i < arr.size(); i++) {
+		cout << arr[i] << " ";
 	}
 	cout << endl;
 }
@@ -11,22 +11,22 @@ void sort() {
 	system("cls");
 	int n = 5;
 	cout << "Selection sort\n\n";
-	int* arr = new int[n];
+	vector<int> arr;
 	cout << "source array:\n";
 	fill_random(arr, n);
-	print(arr, n);
-	selection_sort(arr, n);
+	print(arr);
+	selection_sort(arr);
 	cout << "Sorted array:\n";
-	print(arr, n);
+	print(arr);
 
 	cout << "\n\nQuick sort\n\n";
-	int* arr2 = new int[n];
+	vector<int> arr2;
 	cout << "source array:\n";
 	fill_random(arr2, n);
-	print(arr2, n);
-	Quick_sort(arr2, n);
+	print(arr2);
+	Quick_sort(arr2, 0,n-1);
 	cout << "Sorted array:\n";
-	print(arr2, n);
+	print(arr2);
 	next_programm();
 }
 int menu() {
@@ -37,9 +37,10 @@ int menu() {
 		cout << "\n\tTest sorted arrays        - [ 2 ]";
 		cout << "\n\tTest reverse sorted array - [ 3 ]";
 		cout << "\n\tCheck sort                - [ 4 ]";
+		cout << "\n\tTime sorting              - [ 5 ]";
 		cout << "\n\tExit                      - [esc]";
 		key = _getch();
-		if (key == 27 || key == 49 || key == 50|| key ==51|| key==52) { return key; }
+		if (key == 27 || key == 49 || key == 50|| key ==51|| key==52|| key ==53) { return key; }
 	}
 }
 
@@ -51,14 +52,16 @@ Menu:
 	switch (menu_)
 	{
 	case 49:
-		test_random();
+		//test_random();
 		goto Menu;
 	case 50:
-		test_sorted_array();
+		//test_sorted_array();
 	case 51:
-		test_reverse_sorted_array();
+		//test_reverse_sorted_array();
 	case 52:
 		sort();
+		goto Menu;
+	case 53:
 		goto Menu;
 	case 27:
 		break;

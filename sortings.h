@@ -1,9 +1,15 @@
 #pragma once
+#include <iostream>
+#include <vector>
+#include <conio.h>
+#include <windows.h>
+using namespace std;
 //standart sorting
-void selection_sort(int* arr, int n) {
-	for (int i = 0; i < n; i++) {
+
+void selection_sort(vector<int>  &arr) {
+	for (int i = 0; i < arr.size(); i++) {
 		int min_index = i;
-		for (int j = i + 1; j < n; j++) {
+		for (int j = i + 1; j < arr.size(); j++) {
 			if (arr[min_index] > arr[j]) {
 				min_index = j;
 			}
@@ -14,81 +20,69 @@ void selection_sort(int* arr, int n) {
 	}
 }
 
-void Quick_sort(int* arr, int n) {
-	int i = 0;
-	int j = n - 1;
-	int mid = arr[n / 2];
-	do {
-		while (arr[i] < mid) {
+void Quick_sort(vector <int> &arr, int left, int right) {
+	int i = left, j = right;
+	int tmp;
+	int pivot = arr[(left + right) / 2];
+	while (i <= j) {
+		while (arr[i] < pivot)
 			i++;
-		}
-		while (arr[j] > mid) {
+		while (arr[j] > pivot)
 			j--;
-		}
 		if (i <= j) {
-			int tmp = arr[i];
+			tmp = arr[i];
 			arr[i] = arr[j];
 			arr[j] = tmp;
 			i++;
 			j--;
 		}
-	} while (i <= j);
+	};
 
-
-	if (i < n) {
-		Quick_sort(&arr[i], n - i);
-	}
-	if (j > 0) {
-		Quick_sort(arr, j + 1);
-	}
+	if (left < j)
+		Quick_sort(arr, left, j);
+	if (i < right)
+		Quick_sort(arr, i, right);
 }
 
 //sorting for test
-void selection_sort(int* arr, int n, long long* result) {
-
-	for (int i = 0; i < n; i++) {
+void selection_sort(vector<int> &arr, stats &result) {
+	for (int i = 0; i < arr.size(); i++) {
 		int min_index = i;
-		for (int j = i + 1; j < n; j++) {
-			result[0] += 1;
+		for (int j = i + 1; j < arr.size(); j++) {
+			result.comparison_count += 1;
 			if (arr[min_index] > arr[j]) {
 				min_index = j;
 			}
 		}
 		int tmp = arr[i];
-		result[1] += 1;
+		result.copy_count += 1;
 		arr[i] = arr[min_index];
 		arr[min_index] = tmp;
 	}
 }
-void Quick_sort(int* arr, int n, int* result) {
-	int i = 0;
-	int j = n - 1;
-	int mid = arr[n / 2];
-	result[1] ++;
-	do {
-		result[0]++;
-		while (arr[i] < mid) {
+void Quick_sort(vector <int>& arr, int left, int right, stats &result) {
+	int i = left;
+	int j = right;
+	int pivot = arr[(left + right) / 2];
+	while (i <= j) {
+		result.comparison_count += 1;
+		while (arr[i] < pivot)
 			i++;
-		}
-		result[0]++;
-		while (arr[j] > mid) {
+		result.comparison_count += 1;
+		while (arr[j] > pivot)
 			j--;
-		}
 		if (i <= j) {
+			result.copy_count += 1;
 			int tmp = arr[i];
-			result[1] ++;
 			arr[i] = arr[j];
 			arr[j] = tmp;
 			i++;
 			j--;
 		}
-	} while (i <= j);
+	};
 
-
-	if (i < n) {
-		Quick_sort(&arr[i], n - i, result);
-	}
-	if (j > 0) {
-		Quick_sort(arr, j + 1, result);
-	}
+	if (left < j)
+		Quick_sort(arr, left, j, result);
+	if (i < right)
+		Quick_sort(arr, i, right, result);
 }
