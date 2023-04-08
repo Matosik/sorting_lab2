@@ -1,4 +1,8 @@
+#include <iostream>
 #include "Test.h"
+using namespace std;
+//standart sorting
+
 
 void print(vector<int> arr) {
 	for (int i = 0; i < arr.size(); i++) {
@@ -52,16 +56,19 @@ Menu:
 	switch (menu_)
 	{
 	case 49:
-		//test_random();
+		test_random();
 		goto Menu;
 	case 50:
-		//test_sorted_array();
+		test_sorted_array();
+		goto Menu;
 	case 51:
-		//test_reverse_sorted_array();
+		test_reverse_sorted_array();
+		goto Menu;
 	case 52:
 		sort();
 		goto Menu;
 	case 53:
+		speed_test();
 		goto Menu;
 	case 27:
 		break;
@@ -160,3 +167,35 @@ Menu:
 //	25000Values in array - Number of comparisons : 58616     Number of copying objects : 46117
 //	50000Values in array - Number of comparisons : 117232    Number of copying objects : 92233
 //	100000Values in array - Number of comparisons : 234464   Number of copying objects : 184465
+
+
+//=====SPEED TEST======
+// Quick sort:
+//1000 - Values in array.Time Quick sort - 0.0003749
+//2000 - Values in array.Time Quick sort - 0.0006965
+//3000 - Values in array.Time Quick sort - 0.0011111
+//4000 - Values in array.Time Quick sort - 0.0019628
+//5000 - Values in array.Time Quick sort - 0.0019008
+//6000 - Values in array.Time Quick sort - 0.0023041
+//7000 - Values in array.Time Quick sort - 0.00155
+//8000 - Values in array.Time Quick sort - 0.001779
+//9000 - Values in array.Time Quick sort - 0.0020219
+//10000 - Values in array.Time Quick sort - 0.0023052
+//25000 - Values in array.Time Quick sort - 0.006214
+//50000 - Values in array.Time Quick sort - 0.0134548
+//100000 - Values in array.Time Quick sort - 0.0314865
+//
+//Selection sort :
+//1000 - Values in array.Time Selection sort - 0.0062364
+//2000 - Values in array.Time Selection sort - 0.0252275
+//3000 - Values in array.Time Selection sort - 0.0562192
+//4000 - Values in array.Time Selection sort - 0.101009
+//5000 - Values in array.Time Selection sort - 0.155966
+//6000 - Values in array.Time Selection sort - 0.224774
+//7000 - Values in array.Time Selection sort - 0.309937
+//8000 - Values in array.Time Selection sort - 0.406501
+//9000 - Values in array.Time Selection sort - 0.511644
+//10000 - Values in array.Time Selection sort - 0.62821
+//25000 - Values in array.Time Selection sort - 3.92342
+//50000 - Values in array.Time Selection sort - 15.6611
+//100000 - Values in array.Time Selection sort - 62.4666

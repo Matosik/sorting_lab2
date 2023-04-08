@@ -3,10 +3,20 @@
 #include <vector>
 #include <conio.h>
 #include <windows.h>
-using namespace std;
-//standart sorting
+#include <chrono>
 
-void selection_sort(vector<int>  &arr) {
+using namespace std;
+
+void next_programm() {
+	cout << "\n\n\t\t\t\tPress any key to continue";
+	_getch();
+}
+
+struct stats {
+	size_t comparison_count = 0;
+	size_t copy_count = 0;
+};
+void selection_sort(vector<int>& arr) {
 	for (int i = 0; i < arr.size(); i++) {
 		int min_index = i;
 		for (int j = i + 1; j < arr.size(); j++) {
@@ -20,7 +30,7 @@ void selection_sort(vector<int>  &arr) {
 	}
 }
 
-void Quick_sort(vector <int> &arr, int left, int right) {
+void Quick_sort(vector <int>& arr, int left, int right) {
 	int i = left, j = right;
 	int tmp;
 	int pivot = arr[(left + right) / 2];
@@ -45,7 +55,7 @@ void Quick_sort(vector <int> &arr, int left, int right) {
 }
 
 //sorting for test
-void selection_sort(vector<int> &arr, stats &result) {
+void selection_sort(vector<int>& arr, stats& result) {
 	for (int i = 0; i < arr.size(); i++) {
 		int min_index = i;
 		for (int j = i + 1; j < arr.size(); j++) {
@@ -60,7 +70,7 @@ void selection_sort(vector<int> &arr, stats &result) {
 		arr[min_index] = tmp;
 	}
 }
-void Quick_sort(vector <int>& arr, int left, int right, stats &result) {
+void Quick_sort(vector <int>& arr, int left, int right, stats& result) {
 	int i = left;
 	int j = right;
 	int pivot = arr[(left + right) / 2];
