@@ -169,22 +169,30 @@ void test_reverse_sorted_array() {
 
 //speed
 void speed_quick(int n) {
-	vector<int> arr;
-	fill_random(arr, n);
-	auto start = chrono::high_resolution_clock::now();
-	Quick_sort(arr, 0, n - 1);
-	auto end = chrono::high_resolution_clock::now();
-	chrono::duration<float> result = end - start;
-	cout << n << " -  Values in array. Time Quick sort - " << result.count() << endl;
+	float result = 0;
+	for (int i = 0; i < 100; i++) {
+		vector<int> arr;
+		fill_random(arr, n);
+		auto start = chrono::high_resolution_clock::now();
+		Quick_sort(arr, 0, n - 1);
+		auto end = chrono::high_resolution_clock::now();
+		chrono::duration<float> time = (end - start);
+		result += time.count();
+	}
+	cout << n << " -  Values in array. Time Quick sort - " << result/100 << endl;
 }
 void speed_selection(int n) {
-	vector<int> arr;
-	fill_random(arr, n);
-	auto start = chrono::high_resolution_clock::now();
-	selection_sort(arr);
-	auto end = chrono::high_resolution_clock::now();
-	chrono::duration<float> result = end - start;
-	cout << n << " -  Values in array. Time Selection sort - " << result.count() << endl;
+	float result = 0;
+	for (int i = 0; i < 100; i++) {
+		vector<int> arr;
+		fill_random(arr, n);
+		auto start = chrono::high_resolution_clock::now();
+		selection_sort(arr);
+		auto end = chrono::high_resolution_clock::now();
+		chrono::duration<float> time = end - start;
+		result += time.count();
+	}
+	cout << n << " -  Values in array. Time Selection sort - " << result/100 << endl;
 }
 
 void speed_test() {
@@ -203,6 +211,6 @@ void speed_test() {
 	}
 	speed_selection(25000);
 	speed_selection(50000);
-	//speed_selection(100000);
+	speed_selection(100000);
 	next_programm();
 }

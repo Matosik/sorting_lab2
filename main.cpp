@@ -169,33 +169,34 @@ Menu:
 //	100000Values in array - Number of comparisons : 234464   Number of copying objects : 184465
 
 
-//=====SPEED TEST======
-// Quick sort:
-//1000 - Values in array.Time Quick sort - 0.0003749
-//2000 - Values in array.Time Quick sort - 0.0006965
-//3000 - Values in array.Time Quick sort - 0.0011111
-//4000 - Values in array.Time Quick sort - 0.0019628
-//5000 - Values in array.Time Quick sort - 0.0019008
-//6000 - Values in array.Time Quick sort - 0.0023041
-//7000 - Values in array.Time Quick sort - 0.00155
-//8000 - Values in array.Time Quick sort - 0.001779
-//9000 - Values in array.Time Quick sort - 0.0020219
-//10000 - Values in array.Time Quick sort - 0.0023052
-//25000 - Values in array.Time Quick sort - 0.006214
-//50000 - Values in array.Time Quick sort - 0.0134548
-//100000 - Values in array.Time Quick sort - 0.0314865
+// =====SPEED TEST======
+//Quick sort :
+//1000 - Values in array.Time Quick sort - 0.000182711
+//2000 - Values in array.Time Quick sort - 0.000408604
+//3000 - Values in array.Time Quick sort - 0.000620569
+//4000 - Values in array.Time Quick sort - 0.000862203
+//5000 - Values in array.Time Quick sort - 0.00108466
+//6000 - Values in array.Time Quick sort - 0.00136296
+//7000 - Values in array.Time Quick sort - 0.00159221
+//8000 - Values in array.Time Quick sort - 0.00185935
+//9000 - Values in array.Time Quick sort - 0.00209707
+//10000 - Values in array.Time Quick sort - 0.00239375
+//25000 - Values in array.Time Quick sort - 0.00645463
+//50000 - Values in array.Time Quick sort - 0.0137295
+//100000 - Values in array.Time Quick sort - 0.0289815
+//
 //
 //Selection sort :
-//1000 - Values in array.Time Selection sort - 0.0062364
-//2000 - Values in array.Time Selection sort - 0.0252275
-//3000 - Values in array.Time Selection sort - 0.0562192
-//4000 - Values in array.Time Selection sort - 0.101009
-//5000 - Values in array.Time Selection sort - 0.155966
-//6000 - Values in array.Time Selection sort - 0.224774
-//7000 - Values in array.Time Selection sort - 0.309937
-//8000 - Values in array.Time Selection sort - 0.406501
-//9000 - Values in array.Time Selection sort - 0.511644
-//10000 - Values in array.Time Selection sort - 0.62821
-//25000 - Values in array.Time Selection sort - 3.92342
-//50000 - Values in array.Time Selection sort - 15.6611
+//1000 - Values in array.Time Selection sort - 0.00634512
+//2000 - Values in array.Time Selection sort - 0.0252298
+//3000 - Values in array.Time Selection sort - 0.0566937
+//4000 - Values in array.Time Selection sort - 0.100765
+//5000 - Values in array.Time Selection sort - 0.157499
+//6000 - Values in array.Time Selection sort - 0.22693
+//7000 - Values in array.Time Selection sort - 0.308624
+//8000 - Values in array.Time Selection sort - 0.403351
+//9000 - Values in array.Time Selection sort - 0.509278
+//10000 - Values in array.Time Selection sort - 0.628828
+//25000 - Values in array.Time Selection sort - 3.91936
+//50000 - Values in array.Time Selection sort - 15.6386
 //100000 - Values in array.Time Selection sort - 62.4666
