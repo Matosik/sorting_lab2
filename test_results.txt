@@ -92,3 +92,35 @@ Test Selection sort:
 25000   Values in array - Number of comparisons : 312487500        Number of copying objects : 25000
 50000   Values in array - Number of comparisons : 1249975000       Number of copying objects : 50000
 100000  Values in array - Number of comparisons : 4999950000       Number of copying objects : 100000
+
+=====SPEED TEST======
+Quick sort :
+1000 - Values in array.Time Quick sort - 0.000182711
+2000 - Values in array.Time Quick sort - 0.000408604
+3000 - Values in array.Time Quick sort - 0.000620569
+4000 - Values in array.Time Quick sort - 0.000862203
+5000 - Values in array.Time Quick sort - 0.00108466
+6000 - Values in array.Time Quick sort - 0.00136296
+7000 - Values in array.Time Quick sort - 0.00159221
+8000 - Values in array.Time Quick sort - 0.00185935
+9000 - Values in array.Time Quick sort - 0.00209707
+10000 - Values in array.Time Quick sort - 0.00239375
+25000 - Values in array.Time Quick sort - 0.00645463
+50000 - Values in array.Time Quick sort - 0.0137295
+100000 - Values in array.Time Quick sort - 0.0289815
+
+
+Selection sort :
+1000 - Values in array.Time Selection sort - 0.00634512
+2000 - Values in array.Time Selection sort - 0.0252298
+3000 - Values in array.Time Selection sort - 0.0566937
+4000 - Values in array.Time Selection sort - 0.100765
+5000 - Values in array.Time Selection sort - 0.157499
+6000 - Values in array.Time Selection sort - 0.22693
+7000 - Values in array.Time Selection sort - 0.308624
+8000 - Values in array.Time Selection sort - 0.403351
+9000 - Values in array.Time Selection sort - 0.509278
+10000 - Values in array.Time Selection sort - 0.628828
+25000 - Values in array.Time Selection sort - 3.91936
+50000 - Values in array.Time Selection sort - 15.6386
+100000 - Values in array.Time Selection sort - 62.4666
